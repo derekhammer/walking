@@ -1,5 +1,5 @@
 
-var checkedTemp = parseInt($('input[name="tempature"]:checked').val());
+
 var tempScore = 0;
 var score = 0;
 var temp = 88;
@@ -12,6 +12,8 @@ $(document).ready(function(){
     event.preventDefault();
 
 debugger;
+
+var checkedTemp = parseInt($('input[name="tempature"]:checked').val());
 
 if (temp <= 59){
   tempScore = tempScore + 0;
@@ -36,17 +38,17 @@ if (checkedTemp === tempScore) {
   badTemp = true;
 }
 
-if (weather === $('input[name="weather"]:checked').val()) {
+if (weather === parseInt($('input[name="weather"]:checked').val())) {
   score = score + 3;
 } else {
   badWeather = true;
 }
 
-if (badWeather = true) {
+if (badWeather === true) {
   $("#showBadWeather").show();
 }
 
-if (badTemp = true) {
+if (badTemp === true) {
   $("#showBadTemp").show();
 }
 
