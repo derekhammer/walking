@@ -1,0 +1,66 @@
+.jumbotron{
+  text-align: center;
+  border-radius: 350px;
+  letter-spacing: 6px;
+  background-color: rgba(245, 245, 245, 0.8);
+}
+#heading,#heading_2,#heading_3,#heading_4{
+  text-align: center;
+
+}
+body {
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#center {
+}
+
+.well {
+   background-color: rgba(245, 245, 245, 0.8);
+}
+
+#showBadWeather {
+  display: none;
+}
+
+#showBadTemp {
+  display: none;
+}
+
+#showGreatDay {
+  display: none;
+}
+
+#score0 {
+  display: none;
+}
+#score1 {
+  display: none;
+}
+#score2 {
+  display: none;
+}
+#score3 {
+  display: none;
+}
+#score4 {
+  display: none;
+}
+#score5 {
+  display: none;
+}
+#score6 {
+  display: none;
+}
+#score7 {
+  display: none;
+}
+#score8 {
+  display: none;
+}
+#score9 {
+  display: none;
+}

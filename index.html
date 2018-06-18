@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <meta charset="utf-8">
+  <title>Weather Scraper</title>
+</head>
+<body class="container-fluid">
+  <div class="jumbotron">
+    <h2><strong>Perfect Walk Calculator</strong></h2>
+  </div>
+
+  <form id="calculator">
+
+
+  <div class="row" id="heading">
+
+    <div class="col-md-6">
+<div class="well">
+      <h2>What kind of weather are you looking for?</h2>
+      <ul>
+        <li><input type="radio" name="weather" value="0">Sun</li>
+        <li><input type="radio" name="weather" value="1">Rain</li>
+        <li><input type="radio" name="weather" value="2">Shade</li>
+        <li><input type="radio" name="weather" value="3">Snow</li>
+      </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well">
+      <h2>Preferred tempature</h2>
+      <li><input type="radio" name="tempature" value="0">60˚ or below</li>
+      <li><input type="radio" name="tempature" value="1">60˚-70˚</li>
+      <li><input type="radio" name="tempature" value="2">70˚-80˚</li>
+      <li><input type="radio" name="tempature" value="3">80˚-90˚</li>
+      <li><input type="radio" name="tempature" value="4">90˚+</li>
+    </div>
+    </div>
+  </div>
+  <div class="row" id="heading_2">
+    <div class="col-md-12">
+
+    </div>
+  </div>
+  <div class="row" id="heading_4">
+    <div class="col-md-4">
+      <div class="well well-sm">
+
+      <h2>Location</h2>
+      <ul>
+        <li><label for="zip">Zip-Code:</label>
+        <input type="number" name="zip" value=""></li>
+
+      </ul>
+    </div>
+
+  </div>
+    <div class="col-md-4">
+      <div class="well well-sm">
+
+      <h2>Your walk</h2>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </div>
+  </div>
+    <div class="col-md-4">
+      <div class="well well-sm">
+
+      <h2>Where</h2>
+      <ul>
+        <li><label for="where">Park</label>
+        <input type="radio" name="where" value=""></li>
+        <li><label for="where">City</label>
+        <input type="radio" name="where" value=""></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div id="heading_4" class="row">
+  <div class="col-md-2">
+
+  </div>
+  <div class="col-md-8">
+    <div class="well" id="center">
+
+    <h2>Hello Here are your results</h2>
+
+      <div id="score0">
+        <p>Your score is 0</p>
+      </div>
+      <div id="score1">
+        <p>Your score is 1</p>
+      </div>
+      <div id="score2">
+        <p>Your score is 2</p>
+      </div>
+      <div id="score3">
+        <p>Your score is 3</p>
+      </div>
+      <div id="score4">
+        <p>Your score is 4</p>
+      </div>
+      <div id="score5">
+        <p>Your score is 5</p>
+      </div>
+      <div id="score6">
+        <p>Your score is 6</p>
+      </div>
+      <div id="score7">
+        <p>Your score is 7</p>
+      </div>
+      <div id="score8">
+        <p>Your score is 8</p>
+      </div>
+      <div id="score9">
+        <p>Your score is 9</p>
+      </div>
+    <div id="showBadWeather">
+      <p>The weather does not match your request.</p>
+    </div>
+    <div id="showBadTemp">
+      <p>The tempature does not match your request.</p>
+    </div>
+    <div id="showGreatDay">
+      <p>You are going to have a great walk!</p>
+    </div>
+    <button type="submit" class="btn btn-danger">Reset</button>
+  </div>
+
+</div>
+<div class="col-md-2">
+
+</div>
+</div>
+</form>
+</body>
+</html>
