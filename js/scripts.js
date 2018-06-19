@@ -2,28 +2,45 @@
 
 var tempScore = 0;
 var score = 0;
-var temp = 88;
-var weather = 0;
+var temp = 0;
+var weather1 = 0;
 badWeather = false;
 badTemp = false;
+var zipCode;
+
+
+var requestURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&APPID=8cc43ef0ee2dfb56027fa0a6ebfdc5f3";
+var globalJSON;
+
+
 
 $(document).ready(function(){
+
+
+
+
   $("form#calculator").submit(function(){
     event.preventDefault();
 
+zipCode = $("#zip").val();
+console.log(zipCode);
 debugger;
+globalJSON = $.getJSON(requestURL).then(data => {
+  var realWeather = data.weather[0].main;
+  temp = data.main.temp;
+});
 
 var checkedTemp = parseInt($('input[name="tempature"]:checked').val());
 
-if (temp <= 59){
+if (temp <= 288.15){
   tempScore = tempScore + 0;
-} else if (temp <= 69){
+} else if (temp <= 293.706){
   tempScore = tempScore + 1;
-} else if (temp <= 79){
+} else if (temp <= 299.261){
   tempScore = tempScore + 2;
-} else if (temp <= 89){
+} else if (temp <= 304.817){
   tempScore = tempScore + 3;
-} else if (temp >= 90){
+} else if (temp >= 305.372){
   tempScore = tempScore + 4;
 } else {
   alert("No Tempature Selected");
@@ -38,7 +55,7 @@ if (checkedTemp === tempScore) {
   badTemp = true;
 }
 
-if (weather === parseInt($('input[name="weather"]:checked').val())) {
+if (weather1 === parseInt($('input[name="weather1"]:checked').val())) {
   score = score + 3;
 } else {
   badWeather = true;
@@ -79,6 +96,7 @@ if (score === 0) {
 } else {
   alert("error, bad score")
 }
+
 
 
 });

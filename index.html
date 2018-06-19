@@ -22,10 +22,10 @@
 <div class="well">
       <h2>What kind of weather are you looking for?</h2>
       <ul>
-        <li><input type="radio" name="weather" value="0">Sun</li>
-        <li><input type="radio" name="weather" value="1">Rain</li>
-        <li><input type="radio" name="weather" value="2">Shade</li>
-        <li><input type="radio" name="weather" value="3">Snow</li>
+        <li><input type="radio" name="weather1" value="0">Sun</li>
+        <li><input type="radio" name="weather1" value="1">Rain</li>
+        <li><input type="radio" name="weather1" value="2">Shade</li>
+        <li><input type="radio" name="weather1" value="3">Snow</li>
       </ul>
       </div>
     </div>
@@ -52,7 +52,7 @@
       <h2>Location</h2>
       <ul>
         <li><label for="zip">Zip-Code:</label>
-        <input type="number" name="zip" value=""></li>
+        <input type="text" name="zip" value="" id="zip"></li>
 
       </ul>
     </div>
@@ -89,6 +89,9 @@
     <div class="well" id="center">
 
     <h2>Hello Here are your results</h2>
+
+    <h3></h3>
+    <p id="test"></p>
 
       <div id="score0">
         <p>Your score is 0</p>
