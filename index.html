@@ -9,6 +9,9 @@
   <title>Weather Scraper</title>
 </head>
 <body class="container-fluid">
+  <div class="container">
+
+
   <div class="jumbotron">
     <h2><strong>Perfect Walk Calculator</strong></h2>
   </div>
@@ -18,7 +21,7 @@
 
   <div class="row" id="heading">
 
-    <div class="col-md-6">
+    <div class="col-md-4">
 <div class="well">
       <h2>What kind of weather are you looking for?</h2>
       <ul>
@@ -29,23 +32,7 @@
       </ul>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="well">
-      <h2>Preferred tempature</h2>
-      <li><input type="radio" name="tempature" value="0">60˚ or below</li>
-      <li><input type="radio" name="tempature" value="1">60˚-70˚</li>
-      <li><input type="radio" name="tempature" value="2">70˚-80˚</li>
-      <li><input type="radio" name="tempature" value="3">80˚-90˚</li>
-      <li><input type="radio" name="tempature" value="4">90˚+</li>
-    </div>
-    </div>
-  </div>
-  <div class="row" id="heading_2">
-    <div class="col-md-12">
 
-    </div>
-  </div>
-  <div class="row" id="heading_4">
     <div class="col-md-4">
       <div class="well well-sm">
 
@@ -57,39 +44,43 @@
 
       </ul>
     </div>
+    <div id="textcenter">
 
-  </div>
-    <div class="col-md-4">
-      <div class="well well-sm">
 
-      <h2>Your walk</h2>
     <button type="submit" class="btn btn-success">Submit</button>
-
-  </div>
-  </div>
-    <div class="col-md-4">
-      <div class="well well-sm">
-
-      <h2>Where</h2>
-      <ul>
-        <li><label for="where">Park</label>
-        <input type="radio" name="where" value=""></li>
-        <li><label for="where">City</label>
-        <input type="radio" name="where" value=""></li>
-      </ul>
+        </div>
     </div>
 
+    <div class="col-md-4">
+      <div class="well">
+      <h2>Preferred tempature</h2>
+      <li><input type="radio" name="tempature" value="0">60˚ or below</li>
+      <li><input type="radio" name="tempature" value="1">60˚-70˚</li>
+      <li><input type="radio" name="tempature" value="2">70˚-80˚</li>
+      <li><input type="radio" name="tempature" value="3">80˚-90˚</li>
+      <li><input type="radio" name="tempature" value="4">90˚+</li>
+    </div>
+    </div>
+
+
+  </div>
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="well">
+
+    <h2>Location info</h2>
+    <p>Location: <span id="printName"></span></p>
+    <p>Weather: <span id="printWeather"></span></p>
+    <p>Temperature (in kelvin): <span id="printTemp"></span></p>
+    <p>Wind Speed: <span id="printWind"></span> MPH</p>
   </div>
 </div>
+  <div class="col-md-6">
+    <div class="well" id="length">
 
-<div id="heading_4" class="row">
-  <div class="col-md-2">
-
-  </div>
-  <div class="col-md-8">
-    <div class="well" id="center">
-
-    <h2>Hello Here are your results</h2>
+    <h2>Here are your results</h2>
 
     <h3></h3>
     <p id="test"></p>
@@ -133,13 +124,11 @@
     <div id="showGreatDay">
       <p>You are going to have a great walk!</p>
     </div>
-    <button type="submit" class="btn btn-danger">Reset</button>
+
   </div>
-
 </div>
-<div class="col-md-2">
-
 </div>
+  </div>
 </div>
 </form>
 </body>

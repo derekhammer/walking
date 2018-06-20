@@ -4,10 +4,21 @@
   letter-spacing: 6px;
   background-color: rgba(245, 245, 245, 0.8);
 }
-#heading,#heading_2,#heading_3,#heading_4{
+/*#heading,#heading_2,#heading_3,#heading_4{
   text-align: center;
+}*/
+.container {
+  margin-top: 50px;
+}
+
+#textcenter {
+  text-align: center;
+}
+
+#length {
 
 }
+
 body {
   background-image: url(../img/background.jpg);
   background-position: center;

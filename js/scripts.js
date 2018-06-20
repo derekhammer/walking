@@ -10,8 +10,9 @@ var zipCode;
 var temp;
 var realWeather;
 var globalJSON;
-
-
+var windScrape;
+var townName;
+var printWeather;
 
 $(document).ready(function(){
   $("form#calculator").submit(function(){
@@ -30,25 +31,35 @@ $(document).ready(function(){
       console.log(realWeather);
       temp = data.main.temp;
       console.log(temp);
+      townName = data.name;
+      console.log(townName);
+      windScrape = data.wind.speed;
+      console.log(windScrape);
+      if (windScrape > 39) {
+        alert("too windy");
+      }
+      $("#printName").text(townName);
+      $("#printTemp").text(temp);
+      $("#printWind").text(windScrape);
 
       if (realWeather === "01d" || realWeather === "01n"){
         weather1 = 0;
-        alert("sun");
+        printWeather = "Sunny";
       } else if (realWeather === "02d" || realWeather === "02n" || realWeather === "03d" || realWeather === "03n" || realWeather === "04d" || realWeather === "04n"){
         weather1 = 2;
-        alert("cloud");
+        printWeather = "Cloudy";
       } else if (realWeather === "09d" || realWeather === "09n" || realWeather === "10d" || realWeather === "10n" || realWeather === "50d" || realWeather === "50n"){
         weather1 = 1;
-        alert("rain")
+        printWeather = "Rainy";
       } else if (realWeather === "13d" || realWeather === "13n") {
         weather1 = 3;
-        alert("snow")
+        printWeather = "Snowy";
       } else if (realWeather === "11d" || realWeather === "11n"){
-        alert("DANGER THUNDERSTORM")
+        printWeather = "THUNDERSTORM";
         return;
       }
 
-
+      $("#printWeather").text(printWeather);
 
       var checkedTemp = parseInt($('input[name="tempature"]:checked').val());
 
