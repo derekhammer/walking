@@ -1,12 +1,12 @@
-# _Weather Scraper_
+# _Group Walking Calculator_
 
-#### _Tech Demo to scrape data clientside_
+#### _Calculates weather from zipcode and api._
 
 #### By _**James Hanley**_
 
 ## Description
 
-_The project's goal is to take a node.js proxy, and to call jquery's get function. From the html pulled, it will sort the data and allow us to manipulate the data in stored variables._
+_Takes input from user to define what type of walking experience they would like to have, then compares this data to actual weather data based on zip code provided._
 
 ## Setup
 
@@ -14,20 +14,20 @@ _The project's goal is to take a node.js proxy, and to call jquery's get functio
 
 ## Known Bugs
 
-_None At The Moment._
+_Lacking support for non-us locations, reset manual and not automatic._
 
 ## Contact Information
 
 _James Hanley email: hanley.doth@outlook.com
 	      Github: github.com/Hanleyjames_
-
-## BDD/Specs
-
- |Behavior|Input|Output|
- |--------|-----|------|
- |GetRequests are successful|get https://swagwaggon-weatherbot.herokuapp.com/https://weather.com/weather/monthly/l/{params} |Avoids CORS restrictions|
- 
-
+_Derek Hammer email: derekhammer@hotmail.com
+				Github: github.com/derekhammer
+_Brian Palowski email: Brian@inmotiondelivery.com
+				Github: github.com/bpalowski
+_Marie Dillard email: bunnymarie@protonmail.com
+				Github: github.com/bunnymarie
+_Bates Colin email: Dragonflylord@gmail.com
+				Github: github.com/BatesColin
 
 ### License
 _The author of this work hereby waives all claim of copyright (economic and moral) in this work and immediately places
