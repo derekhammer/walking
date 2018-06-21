@@ -1,5 +1,3 @@
-
-
 var tempScore = 0;
 var score = 0;
 var temp = 0;
@@ -14,46 +12,73 @@ var windScrape;
 var townName;
 var printWeather;
 
+function clearForms(){
+  score = 0;
+  tempScore = 0;
+  badWeather = false;
+  badTemp = false;
+  $("#space").show();
+  $("#showBadWeather").hide();
+  $("#showBadTemp").hide();
+  $("#showGreatDay").hide();
+  $("#score0").hide();
+  $("#score1").hide();
+  $("#score2").hide();
+  $("#score3").hide();
+  $("#score4").hide();
+  $("#score5").hide();
+  $("#score6").hide();
+  $("#score7").hide();
+  $("#score8").hide();
+  $("#score9").hide();
+  $("#printName").text("");
+  $("#printTemp").text("");
+  $("#printWind").text("");
+  document.body.className = document.body.className.replace("cloud","basic");
+  document.body.className = document.body.className.replace("sun","basic");
+  document.body.className = document.body.className.replace("rain","basic");
+  document.body.className = document.body.className.replace("snow","basic");
+}
+
 $(document).ready(function(){
   $("form#calculator").submit(function(){
     event.preventDefault();
-
+    debugger;
     zipCode = $("#zip").val();
     var requestURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&APPID=8cc43ef0ee2dfb56027fa0a6ebfdc5f3";
-    //var realWeather;
 
-
-    console.log(requestURL);
-
+    $("button").click(function(){
+      clearForms();
+    });
 
     globalJSON = $.getJSON(requestURL).then(data => {
       realWeather = data.weather[0].icon;
-      console.log(realWeather);
       temp = data.main.temp;
-      console.log(temp);
       townName = data.name;
-      console.log(townName);
       windScrape = data.wind.speed;
-      console.log(windScrape);
       if (windScrape > 39) {
         alert("too windy");
       }
       $("#printName").text(townName);
-      $("#printTemp").text(temp);
-      $("#printWind").text(windScrape);
-
+      $("#printTemp").text(Math.floor(((temp-273.15)*1.8)+32));
+      $("#printWind").text(windScrape + " MPH");
+      $("#space").hide();
       if (realWeather === "01d" || realWeather === "01n"){
         weather1 = 0;
         printWeather = "Sunny";
+        document.body.className = document.body.className.replace("basic","sun");
       } else if (realWeather === "02d" || realWeather === "02n" || realWeather === "03d" || realWeather === "03n" || realWeather === "04d" || realWeather === "04n"){
         weather1 = 2;
         printWeather = "Cloudy";
+        document.body.className = document.body.className.replace("basic","cloud");
       } else if (realWeather === "09d" || realWeather === "09n" || realWeather === "10d" || realWeather === "10n" || realWeather === "50d" || realWeather === "50n"){
         weather1 = 1;
         printWeather = "Rainy";
+        document.body.className = document.body.className.replace("basic","rain");
       } else if (realWeather === "13d" || realWeather === "13n") {
         weather1 = 3;
         printWeather = "Snowy";
+        document.body.className = document.body.className.replace("basic","snow");
       } else if (realWeather === "11d" || realWeather === "11n"){
         printWeather = "THUNDERSTORM";
         return;
@@ -65,19 +90,14 @@ $(document).ready(function(){
 
       if (temp <= 288.15){
         tempScore = tempScore + 0;
-        alert("60 or below");
       } else if (temp <= 293.706){
         tempScore = tempScore + 1;
-        alert("60 to 70");
       } else if (temp <= 299.261){
         tempScore = tempScore + 2;
-        alert("70 to 80");
       } else if (temp <= 304.817){
         tempScore = tempScore + 3;
-        alert("80 to 90");
       } else if (temp >= 305.372){
         tempScore = tempScore + 4;
-        alert("90 or more");
       } else {
         alert("No Tempature Selected");
         return;
@@ -134,5 +154,10 @@ $(document).ready(function(){
       }
 
     });
+    globalJSON.fail(function(){
+      alert("Invalid zipcode, try again ;)");
+      clearForms();
+    })
   });
+
 });

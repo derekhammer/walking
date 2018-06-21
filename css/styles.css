@@ -7,9 +7,7 @@
 /*#heading,#heading_2,#heading_3,#heading_4{
   text-align: center;
 }*/
-.container {
-  margin-top: 50px;
-}
+
 
 #textcenter {
   text-align: center;
@@ -20,17 +18,59 @@
 }
 
 body {
+  font-family: 'Jaldi', sans-serif;
+}
+
+.basic {
   background-image: url(../img/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sun {
+  background-image: url(../img/sun.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.rain {
+  background-image: url(../img/rain.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.cloud {
+  background-image: url(../img/cloud.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.snow {
+  background-image: url(../img/snow.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 #center {
 }
 
 .well {
-   background-color: rgba(245, 245, 245, 0.8);
+   background-color: rgba(245, 245, 245, 0.7);
 }
 
 #showBadWeather {
@@ -74,4 +114,15 @@ body {
 }
 #score9 {
   display: none;
+}
+#fancy {
+  font-family: 'Cinzel', serif;
+  border: solid;
+  border-radius: 350px;
+  background-color: lightblue;
+  border-color: black;
+  width: 300px;
+  text-align: center;
+  height: 50px;
+  font-size: 31px;
 }

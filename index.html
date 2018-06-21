@@ -3,18 +3,28 @@
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:900|Jaldi:700" rel="stylesheet">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
   <meta charset="utf-8">
   <title>Weather Scraper</title>
 </head>
-<body class="container-fluid">
+
+<div id="basic">
+
+<body class="basic">
+
+
   <div class="container">
+
 
 
   <div class="jumbotron">
     <h2><strong>Perfect Walk Calculator</strong></h2>
   </div>
+
+
+
 
   <form id="calculator">
 
@@ -25,10 +35,10 @@
 <div class="well">
       <h2>What kind of weather are you looking for?</h2>
       <ul>
-        <li><input type="radio" name="weather1" value="0">Sun</li>
-        <li><input type="radio" name="weather1" value="1">Rain</li>
-        <li><input type="radio" name="weather1" value="2">Cloudy</li>
-        <li><input type="radio" name="weather1" value="3">Snow</li>
+        <li><input type="radio" name="weather1" id="weatherID" value="0">Sun</li>
+        <li><input type="radio" name="weather1" id="weatherID" value="1">Rain</li>
+        <li><input type="radio" name="weather1" id="weatherID" value="2">Cloudy</li>
+        <li><input type="radio" name="weather1" id="weatherID" value="3">Snow</li>
       </ul>
       </div>
     </div>
@@ -40,7 +50,7 @@
       <ul>
 
         <li><label for="zip">Zip-Code:</label>
-        <input type="text" name="zip" value="" id="zip"></li>
+        <input type="number" name="zip" value="" id="zip"></li>
 
       </ul>
     </div>
@@ -48,17 +58,18 @@
 
 
     <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" value="reset" name="button">Reset</button>
         </div>
     </div>
 
     <div class="col-md-4">
       <div class="well">
       <h2>Preferred tempature</h2>
-      <li><input type="radio" name="tempature" value="0">60˚ or below</li>
-      <li><input type="radio" name="tempature" value="1">60˚-70˚</li>
-      <li><input type="radio" name="tempature" value="2">70˚-80˚</li>
-      <li><input type="radio" name="tempature" value="3">80˚-90˚</li>
-      <li><input type="radio" name="tempature" value="4">90˚+</li>
+      <li><input type="radio" name="tempature" id="tempID" value="0">60˚ or below</li>
+      <li><input type="radio" name="tempature" id="tempID" value="1">60˚-70˚</li>
+      <li><input type="radio" name="tempature" id="tempID" value="2">70˚-80˚</li>
+      <li><input type="radio" name="tempature" id="tempID" value="3">80˚-90˚</li>
+      <li><input type="radio" name="tempature" id="tempID" value="4">90˚+</li>
     </div>
     </div>
 
@@ -73,50 +84,57 @@
     <h2>Location info</h2>
     <p>Location: <span id="printName"></span></p>
     <p>Weather: <span id="printWeather"></span></p>
-    <p>Temperature (in kelvin): <span id="printTemp"></span></p>
-    <p>Wind Speed: <span id="printWind"></span> MPH</p>
+    <p>Temperature: <span id="printTemp"></span></p>
+    <p>Wind Speed: <span id="printWind"></span></p>
   </div>
 </div>
   <div class="col-md-6">
     <div class="well" id="length">
 
-    <h2>Here are your results</h2>
-
+    <h2>Results</h2>
+<div id="space">
+  <br>
+  <br>
+  <br>
+  <br>
+ <br>
+</div>
     <h3></h3>
     <p id="test"></p>
 
       <div id="score0">
-        <p>Your score is 0</p>
+        <p id="fancy">Your score is 0</p>
       </div>
       <div id="score1">
-        <p>Your score is 1</p>
+        <p id="fancy">Your score is 1</p>
       </div>
       <div id="score2">
-        <p>Your score is 2</p>
+        <p id="fancy">Your score is 2</p>
       </div>
       <div id="score3">
-        <p>Your score is 3</p>
+        <p id="fancy">Your score is 3</p>
       </div>
       <div id="score4">
-        <p>Your score is 4</p>
+        <p id="fancy">Your score is 4</p>
       </div>
       <div id="score5">
-        <p>Your score is 5</p>
+        <p id="fancy">Your score is 5</p>
       </div>
       <div id="score6">
-        <p>Your score is 6</p>
+        <p id="fancy">Your score is 6</p>
       </div>
       <div id="score7">
-        <p>Your score is 7</p>
+        <p id="fancy">Your score is 7</p>
       </div>
       <div id="score8">
-        <p>Your score is 8</p>
+        <p id="fancy">Your score is 8</p>
       </div>
       <div id="score9">
-        <p>Your score is 9</p>
-      </div>
+        <p id="fancy">Your score is 9</p>
+
+    </div>
     <div id="showBadWeather">
-      <p>The weather does not match your request.</p>
+      <p>Your requested weather does not match your locations weather.</p>
     </div>
     <div id="showBadTemp">
       <p>The tempature does not match your request.</p>
@@ -126,10 +144,19 @@
     </div>
 
   </div>
+
 </div>
+
 </div>
-  </div>
+
 </div>
+
+
 </form>
+
+</div>
+
 </body>
+</div>
+
 </html>
