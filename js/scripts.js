@@ -89,7 +89,7 @@ $(document).ready(function(){
       $("#printWeather").text(printWeather);
 
       var checkedTemp = parseInt($('input[name="tempature"]:checked').val());
-      if (weather1 = 4){
+      if (weather1 === 4){
         tempScore = 0;
       } else if (temp <= 288.15){
         tempScore = tempScore + 0;
