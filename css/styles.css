@@ -85,6 +85,10 @@ body {
   display: none;
 }
 
+#thunder {
+  display: none;
+}
+
 #score0 {
   display: none;
 }

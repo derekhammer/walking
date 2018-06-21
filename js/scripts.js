@@ -21,6 +21,7 @@ function clearForms(){
   $("#showBadWeather").hide();
   $("#showBadTemp").hide();
   $("#showGreatDay").hide();
+  $("#thunder").hide();
   $("#score0").hide();
   $("#score1").hide();
   $("#score2").hide();
@@ -80,15 +81,17 @@ $(document).ready(function(){
         printWeather = "Snowy";
         document.body.className = document.body.className.replace("basic","snow");
       } else if (realWeather === "11d" || realWeather === "11n"){
+        weather1 = 4;
         printWeather = "THUNDERSTORM";
-        return;
+        //FUCKING THUNDER
       }
 
       $("#printWeather").text(printWeather);
 
       var checkedTemp = parseInt($('input[name="tempature"]:checked').val());
-
-      if (temp <= 288.15){
+      if (weather1 = 4){
+        tempScore = 0;
+      } else if (temp <= 288.15){
         tempScore = tempScore + 0;
       } else if (temp <= 293.706){
         tempScore = tempScore + 1;
@@ -128,8 +131,9 @@ $(document).ready(function(){
       if (badWeather === false && badTemp === false){
         $("#showGreatDay").show();
       }
-
-      if (score === 0) {
+      if (weather1 === 4){
+        $("#thunder").show();
+      } else if (score === 0) {
         $("#score0").show();
       } else if (score === 1) {
         $("#score1").show();
