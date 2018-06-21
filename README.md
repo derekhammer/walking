@@ -2,7 +2,7 @@
 
 #### _Calculates weather from zipcode and api._
 
-#### By _**James Hanley**_
+#### By _**James Hanley, Brian Palowski, Colin Bates, Marie Dillard, Derek Hammer**_
 
 ## Description
 
@@ -20,14 +20,18 @@ _Lacking support for non-us locations, reset manual and not automatic._
 
 _James Hanley email: hanley.doth@outlook.com
 	      Github: github.com/Hanleyjames_
+
 _Derek Hammer email: derekhammer@hotmail.com
-				Github: github.com/derekhammer
+				Github: github.com/derekhammer_
+
 _Brian Palowski email: Brian@inmotiondelivery.com
-				Github: github.com/bpalowski
+				Github: github.com/bpalowski_
+
 _Marie Dillard email: bunnymarie@protonmail.com
-				Github: github.com/bunnymarie
+				Github: github.com/bunnymarie_
+				
 _Bates Colin email: Dragonflylord@gmail.com
-				Github: github.com/BatesColin
+				Github: github.com/BatesColin_
 
 ### License
 _The author of this work hereby waives all claim of copyright (economic and moral) in this work and immediately places
